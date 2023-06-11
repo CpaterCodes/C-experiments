@@ -21,5 +21,5 @@ architecture, networking and systems programming.
 
 ## Tasks
 
-Watch this space!
+1. Implement stacks, queues and perhaps other dynamic data structures...
 
