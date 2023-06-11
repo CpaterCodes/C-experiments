@@ -1,5 +1,5 @@
 echo "Building..."
-gcc -o main -I src/ src/main.c
+make
 echo "Running!"
 echo "---------------------------------------------------------------------"
 ./main
