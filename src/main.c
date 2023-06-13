@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <try_prints.h>
+#include <dyn_structures.h>
 
 typedef int result;
 

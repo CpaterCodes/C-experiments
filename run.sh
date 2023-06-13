@@ -9,7 +9,7 @@ echo "Building..."
 make
 echo "Running..."
 line
-./main
+./a.out
 line
 echo "Done!"
 
