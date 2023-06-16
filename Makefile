@@ -1,6 +1,6 @@
 
 cc := gcc
-options := -L src/ -I headers/ -c
+options := -I headers/ -c
 obj_output := -o objects/
 
 main: objects/main.o objects/dyn_structures.o

@@ -2,9 +2,9 @@
 // Focusing on pointers to structs, for now
 
 typedef struct stack {
-	void *contents;
 	int items_held;
 	int capacity;
+	void *contents[];
 } Stack;
 
 Stack new_stack (int);
