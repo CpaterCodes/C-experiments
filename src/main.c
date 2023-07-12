@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <try_prints.h>
-#include <dyn_structures.h>
+#include "../headers/try_prints.h"
+#include "../headers/dyn_structures.h"
 
 
 typedef int result;

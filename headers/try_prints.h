@@ -1,4 +1,3 @@
-
 #include <stdlib.h>
 
 #define try_puts(string, happy_path, exception_path) {\
