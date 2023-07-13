@@ -4,14 +4,14 @@
 typedef struct stack {
 	int items_held;
 	int capacity;
-	void *contents[];
+	int *contents[];
 } Stack;
 
 Stack new_stack (int);
 
-void push_to (Stack, void*);
+void push_to (Stack*, int*);
 
-void* pop_from (Stack);
+void* pop_from (Stack*);
 
-void check_inside (Stack);
+void check_inside (Stack*);
 

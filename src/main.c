@@ -17,7 +17,12 @@ void test_stack_init(void) {
 	assert(example_stack.items_held == 0);
 	puts("It will initialise with an items held value of 0.");
 	
-	printf("Size: %lu\n", sizeof(example_stack.contents[0]));
+	int stack_size;
+	for (int i = 0; i < example_stack.capacity; i++){
+		stack_size += sizeof(example_stack.contents[0]);
+	}
+	printf("Size total: %d\n", stack_size);
+	printf("Size per element: %lu\n", sizeof(example_stack.contents[0])); 
 }
 
 result main(void) {
