@@ -6,6 +6,8 @@ function line() {
 }
 
 echo "Building..."
+make objects/dyn_structures.o
+make objects/main.o
 make
 echo "Running..."
 line
