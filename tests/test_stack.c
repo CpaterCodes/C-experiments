@@ -41,7 +41,24 @@ void test_push(void){
 	assert(stack_for_push.contents[1] != &point_b);
 }
 
-void test_pop(void){}
+void test_pop(void){
+	Stack stack_for_pop = new_stack(4);
+	puts("Should safely return nothing; empty\n");
+	assert(pop_from(&stack_for_pop) == NULL);
+
+	Point point_a = {.x=0, .y=0}; push_to(&stack_for_pop, &point_a);
+	Point point_b = {.x=5, .y=0}; push_to(&stack_for_pop, &point_b);
+	Point point_c = {.x=0, .y=5}; push_to(&stack_for_pop, &point_c);
+	Point point_d = {.x=5, .y=5}; push_to(&stack_for_pop, &point_d);
+
+	puts("Stack should now have 4 points. Testing...\n");
+	assert(stack_for_pop.items_held == 4);
+	Point* popped = pop_from(&stack_for_pop);
+	puts("Checking new item count\n");
+	assert(stack_for_pop.items_held == 3);
+	puts("Checking details of popped item...\n");
+	assert(popped->x == 5 && popped->y == 5);
+}
 
 void test_stack(){
 	test_stack_init();

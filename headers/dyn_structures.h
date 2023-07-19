@@ -11,7 +11,7 @@ Stack new_stack (int);
 
 void push_to (Stack*, void*);
 
-int* pop_from (Stack*);
+void* pop_from (Stack*);
 
 void check_inside (Stack*);
 
