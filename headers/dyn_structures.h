@@ -7,7 +7,7 @@ typedef struct stack {
 	void *contents[];
 } Stack;
 
-Stack new_stack (int);
+Stack* new_stack (int);
 
 void push_to (Stack*, void*);
 
