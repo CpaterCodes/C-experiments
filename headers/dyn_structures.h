@@ -7,11 +7,15 @@ typedef struct stack {
 	void *contents[];
 } Stack;
 
-Stack* new_stack (int);
+Stack* new_stack(int);
 
-void push_to (Stack*, void*);
+void push_to(Stack*, void*);
 
-void* pop_from (Stack*);
+void* pop_from(Stack*);
 
-void check_inside (Stack*);
+void* extend(Stack*, int);
+
+void* contract(Stack*, int);
+
+void check_inside(Stack*);
 

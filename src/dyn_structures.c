@@ -43,3 +43,25 @@ void* pop_from(Stack *stack){
 	return first_out;
 }
 
+#define resize_stack(stack, size) (realloc(\
+	stack, 2*sizeof(int) + size*sizeof(void*)\
+))
+
+void* extend(Stack *stack, int increment){
+
+	int new_capacity = stack->capacity + increment;
+	stack->capacity = new_capacity;
+	return resize_stack(stack, new_capacity);	
+}
+
+void* contract(Stack *stack, int decrement){
+	
+	int new_capacity = stack->capacity - decrement;
+
+	if (new_capacity < stack->items_held || new_capacity < 1){
+		return stack;
+	}
+	stack->capacity = new_capacity;
+	return resize_stack(stack, new_capacity);
+}
+

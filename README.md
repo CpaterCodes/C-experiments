@@ -29,8 +29,8 @@ production of simple systems where performance is critical - even where
 - Should have a set capacity [completed]
 - Should accept items pushed and store them [completed]
 - Should yield items popped and relinquish them [completed]
-- Should be extendable [pending]
-- Should be safely contractable [pending]
+- Should be extendable [completed]
+- Should be safely contractable [completed]
 - Should make contents viewable [pending]
 ```
 

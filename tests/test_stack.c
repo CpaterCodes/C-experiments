@@ -74,9 +74,47 @@ void test_pop(void){
 	puts("Pop testing: Complete\n");
 }
 
+void test_extend(void){
+
+	puts("Initialising with a capacity of 1");
+
+	Stack* undersized_stack = new_stack(1);
+	Point some_point = {.x=1, .y=1};
+	Point surplus_point = {.x=2, .y=2};
+	
+	puts("Should accept the second item once extended...");
+	undersized_stack = extend(undersized_stack, 1);
+	push_to(undersized_stack, &some_point);
+	push_to(undersized_stack, &surplus_point);
+	assert(undersized_stack->items_held == 2);
+}
+
+void test_contract(void){
+	Stack* oversized_stack = new_stack(3);
+
+	puts("Should contract assuming there is empty space to do so");
+	oversized_stack = contract(oversized_stack, 1);
+	assert(oversized_stack->capacity == 2);
+
+	puts("Should not contract to 0");
+	oversized_stack = contract(oversized_stack, 2);
+	assert(oversized_stack->capacity == 2);
+
+	Point some_point = { .x=2, .y=4};
+	Point surplus_point = {.x=4, .y=8};
+	push_to(oversized_stack, &some_point);
+	push_to(oversized_stack, &some_point);
+
+	puts("Should not be allowed to contract below current fill");
+	oversized_stack = contract(oversized_stack, 1);
+	assert(oversized_stack->capacity == 2);
+}
+
 void test_stack(){
 	test_stack_init();
 	test_push();
 	test_pop();
+	test_extend();
+	test_contract();
 }
 
