@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include "../tests/test_stack.h"
-#include "../headers/dyn_structures.h"
+#include "../headers/stack.h"
 
 void test_stack_init(void) {
 	puts("Testing stack init...\n");
@@ -75,7 +75,6 @@ void test_pop(void){
 }
 
 void test_extend(void){
-
 	puts("Initialising with a capacity of 1");
 
 	Stack* undersized_stack = new_stack(1);
@@ -87,6 +86,7 @@ void test_extend(void){
 	push_to(undersized_stack, &some_point);
 	push_to(undersized_stack, &surplus_point);
 	assert(undersized_stack->items_held == 2);
+	puts("Extend Testing: Complete\n");
 }
 
 void test_contract(void){
@@ -108,6 +108,7 @@ void test_contract(void){
 	puts("Should not be allowed to contract below current fill");
 	oversized_stack = contract(oversized_stack, 1);
 	assert(oversized_stack->capacity == 2);
+	puts("Contract Testing: Complete\n");
 }
 
 void test_stack(){

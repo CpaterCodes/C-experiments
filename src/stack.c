@@ -1,4 +1,4 @@
-#include "../headers/dyn_structures.h"
+#include "../headers/stack.h"
 #include<stdlib.h>
 #include<stdio.h>
 #include <string.h>

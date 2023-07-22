@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include "../headers/try_prints.h"
-#include "../headers/dyn_structures.h"
+#include "../headers/stack.h"
 
 typedef int result;
 
