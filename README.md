@@ -14,12 +14,14 @@ Secondly, owing to my previous experience with largely higher-level,
 general purpose languages with rich features I have been meaning to explore
 a lower-level language such as C. Moreover, I also welcome the challenges 
 which arise where built-in dynamic data structures, for example, 
-are not a given. 
-These once again provide the chance to understand concepts
-such as file I/O, networking and memory management etc. in depth.
+are not a given.
 
-Thirdly, the language itself also still boasts a crucial use-case in the 
-production of simple systems where performance is critical - even where 
+Thirdly, programming with C offers me the opportunity to work in more depth 
+wih file I/O, networking and memory management etc.
+
+Fourthly, the language itself also still boasts a crucial use-case in the 
+production of systems where speed and explicit management of memory are 
+crucial.
 
 ## Tasks
 
@@ -33,4 +35,9 @@ production of simple systems where performance is critical - even where
 - Should be safely contractable [completed]
 - Should make contents viewable [pending]
 ```
+
+## Additional Comments
+
+I am open to feedback and suggestions for further exercises; I am hoping to
+continue to build my knowledge and skills with the C programming language.
 
