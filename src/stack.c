@@ -65,3 +65,11 @@ void* contract(Stack *stack, int decrement){
 	return resize_stack(stack, new_capacity);
 }
 
+char* view_stack(Stack* stack, view_func viewer){
+
+	for(int index = 0; index < stack->capacity; ++index){
+	//	
+	}
+	return "...";
+} 
+

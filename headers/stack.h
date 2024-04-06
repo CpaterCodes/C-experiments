@@ -17,5 +17,7 @@ void* extend(Stack*, int);
 
 void* contract(Stack*, int);
 
-void check_inside(Stack*);
+typedef char* (*view_func)(void*);
+
+char* view_stack(Stack*, view_func);
 

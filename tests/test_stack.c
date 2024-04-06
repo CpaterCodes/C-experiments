@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <assert.h>
 #include "../tests/test_stack.h"
 #include "../headers/stack.h"
@@ -111,11 +112,29 @@ void test_contract(void){
 	puts("Contract Testing: Complete\n");
 }
 
+char* view_point(Point* point){
+	return "...";
+}
+
+void test_view(void){
+	puts("Should format stack, given a means to format members");
+	Stack* stack = new_stack(3);
+	Point a = {.x=1, .y=1}; Point b = {.x = 2, .y = 2};
+	push_to(stack, &a); push_to(stack, &b);
+	char* (*viewer) (void*) = (view_func) &view_point; 
+	char* stack_view = view_stack(stack, viewer);
+
+	assert(
+		strcmp(stack_view, "[{x: 1,y: 1}, {x: 2,y: 2}]") == 0
+	);
+}
+
 void test_stack(){
 	test_stack_init();
 	test_push();
 	test_pop();
 	test_extend();
 	test_contract();
+	test_view();
 }
 
